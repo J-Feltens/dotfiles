@@ -9,7 +9,7 @@ local capabilities = require('blink.cmp').get_lsp_capabilities()
 
 -- Example: Lua language server setup
 lspconfig.lua_ls.setup({
-     settings = {
+    settings = {
         Lua = {
             diagnostics = {
                 globals = { 'vim' } -- Recognize 'vim' as a global variable
@@ -27,7 +27,12 @@ lspconfig.lua_ls.setup({
 
 
 -- python
-lspconfig.pylsp.setup{
+lspconfig.pylsp.setup {
+    capabilities = capabilities,
+}
+
+-- bash
+lspconfig.bashls.setup {
     capabilities = capabilities,
 }
 
