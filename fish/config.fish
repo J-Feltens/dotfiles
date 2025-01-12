@@ -9,6 +9,7 @@ alias pw='dcli password'
 alias jvnc='x11vnc -display :1 -auth guess -forever -loop -noxdamage -repeat - passwd pwd -rfbport 5901'
 alias obsidian='~/Obsidian'
 alias fs='starship init fish | source'
+alias tk='tmux kill-server'                    # kill tmux server
 
 # init starship prompt on startup
 #
