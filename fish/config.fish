@@ -10,6 +10,7 @@ alias jvnc='x11vnc -display :1 -auth guess -forever -loop -noxdamage -repeat - p
 alias obsidian='~/Obsidian'
 alias fs='starship init fish | source'
 alias tk='tmux kill-server'                    # kill tmux server
+alias bat='batcat'
 
 # init starship prompt on startup
 #
