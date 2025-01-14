@@ -32,6 +32,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 -- color theme
 -- vim.cmd[colorscheme tokyonight-moon]]
 vim.cmd [[colorscheme kanagawa]]
+-- vim.cmd [[colorscheme gruvbox]]
 vim.cmd [[NvimTreeOpen]]
 
 -- custom keybinds
@@ -43,10 +44,10 @@ vim.keymap.set('n', '<leader>t', ':NvimTreeToggle<CR>', { desc = "Toggle NvimTre
 local opts = { noremap = true, silent = true }
 
 -- Window navigation
-vim.api.nvim_set_keymap('n', '<Leader><Up>', '<C-w>k', opts)    -- Navigate up
-vim.api.nvim_set_keymap('n', '<Leader><Down>', '<C-w>j', opts)  -- Navigate down
-vim.api.nvim_set_keymap('n', '<Leader><Left>', '<C-w>h', opts)  -- Navigate left
-vim.api.nvim_set_keymap('n', '<Leader><Right>', '<C-w>l', opts) -- Navigate right
+vim.api.nvim_set_keymap('n', '<Leader><Up>', '<C-w>k', opts)      -- Navigate up
+vim.api.nvim_set_keymap('n', '<Leader><Down>', '<C-w>j', opts)    -- Navigate down
+vim.api.nvim_set_keymap('n', '<Leader><Left>', '<C-w>h', opts)    -- Navigate left
+vim.api.nvim_set_keymap('n', '<Leader><Right>', '<C-w>l', opts)   -- Navigate right
 
 vim.keymap.set('n', '<leader>fc', function()
 		builtin.find_files({
