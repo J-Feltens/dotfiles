@@ -3,10 +3,10 @@ read -p "Continue? (y/n) " -n 1 -r
 echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-	cp -rf ~/Documents/dotfiles/nvim ~/.config/
-	cp -rf ~/Documents/dotfiles/fish ~/.config/
-	cp -rf ~/Documents/dotfiles/tmux ~/.config/
-	cp -rf ~/Documents/dotfiles/starship ~/.config/
+	cp -rf ~/dotfiles/nvim ~/.config/
+	cp -rf ~/dotfiles/fish ~/.config/
+	cp -rf ~/dotfiles/tmux ~/.config/
+	cp -rf ~/dotfiles/starship ~/.config/
 
 	echo 'Done :)'
 else
