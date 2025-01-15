@@ -1,4 +1,5 @@
-function ls-kind --description "Use eza for a fancier ls"
+function ls-size --description "ls using eza, sorted by file type"
+
     if command -q eza
         echo
         eza -l --sort=type -o --header --no-user $argv
