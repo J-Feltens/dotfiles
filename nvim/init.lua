@@ -31,8 +31,10 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 
 -- color theme
 -- vim.cmd[colorscheme tokyonight-moon]]
-vim.cmd [[colorscheme kanagawa]]
+-- vim.cmd [[colorscheme kanagawa]]
 -- vim.cmd [[colorscheme gruvbox]]
+vim.cmd [[colorscheme catppuccin-macchiato]]
+
 vim.cmd [[NvimTreeOpen]]
 
 -- lua line
