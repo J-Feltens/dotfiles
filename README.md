@@ -6,6 +6,7 @@
 - fish
 - starship
 
-### Additional Tools:
+### More Goodies:
 - batcat
 - eza
+- nerdfonts
