@@ -8,7 +8,6 @@ emma = json.loads(emma_raw)
 cpu_key = 'k10temp-pci-00c3'
 fan_key = 'nct6798-isa-0290'
 
-print(emma['nct6798-isa-0290'].keys())
 
 cpu_temps = {
         'package': emma[cpu_key]['Tctl']['temp1_input'],
