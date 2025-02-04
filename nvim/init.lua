@@ -69,9 +69,9 @@ vim.keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTre
 local opts = { noremap = true, silent = true }
 
 -- Window navigation
-vim.api.nvim_set_keymap("n", "<Leader><Up>", "<C-w>k", opts) -- Navigate up
-vim.api.nvim_set_keymap("n", "<Leader><Down>", "<C-w>j", opts) -- Navigate down
-vim.api.nvim_set_keymap("n", "<Leader><Left>", "<C-w>h", opts) -- Navigate left
+vim.api.nvim_set_keymap("n", "<Leader><Up>", "<C-w>k", opts)    -- Navigate up
+vim.api.nvim_set_keymap("n", "<Leader><Down>", "<C-w>j", opts)  -- Navigate down
+vim.api.nvim_set_keymap("n", "<Leader><Left>", "<C-w>h", opts)  -- Navigate left
 vim.api.nvim_set_keymap("n", "<Leader><Right>", "<C-w>l", opts) -- Navigate right
 
 -- space-f-c: open nvim configs
@@ -104,3 +104,5 @@ vim.api.nvim_set_keymap(
 )
 
 vim.api.nvim_set_keymap("n", "<leader>dd", ":lua require'dapui'.open()<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<leader>rn", ":lua vim.lsp.buf.rename()<CR>", { noremap = true, silent = true })
