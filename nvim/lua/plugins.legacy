@@ -1,4 +1,26 @@
 return {
+	{ "tpope/vim-commentary" },
+	{ "jiangmiao/auto-pairs" },
+	{ "mong8se/actually.nvim", enabled = false },
+	{ "tpope/vim-sleuth" },
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.8",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = false,
+		priority = 1000,
+	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
@@ -6,22 +28,33 @@ return {
 		end,
 
 		dependencies = {
-			{
-				"williamboman/mason.nvim",
-				config = true,
-			},
-			{
-				"williamboman/mason-lspconfig.nvim",
-				opts = {
-					ensure_installed = {
-						"pyright",
-						"pylsp",
-						"lua_ls",
-						"bashls",
-					},
-				},
-			},
+			{ "williamboman/mason.nvim", config = true },
+			"williamboman/mason-lspconfig.nvim",
 		},
+	},
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			require("nvim-tree").setup({
+				sort = {
+					sorter = "case_sensitive",
+				},
+				view = {
+					width = 40,
+				},
+				renderer = {
+					group_empty = true,
+				},
+				filters = {
+					dotfiles = true,
+				},
+			})
+		end,
 	},
 	{
 		"saghen/blink.cmp",
@@ -63,6 +96,26 @@ return {
 		opts_extend = { "sources.default" },
 	},
 	{
+		{
+			"folke/which-key.nvim",
+			event = "VeryLazy",
+			opts = {
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			},
+			keys = {
+				{
+					"<leader>?",
+					function()
+						require("which-key").show({ global = false })
+					end,
+					desc = "Buffer Local Keymaps (which-key)",
+				},
+			},
+		},
+	},
+	{
 		"stevearc/conform.nvim",
 		opts = {},
 		config = function()
@@ -83,6 +136,21 @@ return {
 		end,
 	},
 	{
-		"jiangmiao/auto-pairs",
+		"ya2s/nvim-cursorline",
+		config = function()
+			require("nvim-cursorline").setup({
+				cursorline = {
+					enable = true,
+					timeout = 0,
+					number = true, -- Set to true if you want the line number to highlight with the cursor line
+				},
+				cursorword = {
+					enable = true,
+					min_length = 2, -- Minimum word length to highlight
+					hl = { underline = true },
+				},
+			})
+		end,
 	},
+	--{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... }
 }

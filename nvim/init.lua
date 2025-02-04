@@ -91,3 +91,16 @@ vim.keymap.set("n", "<leader>fd", function()
 end, {
 	desc = "Search in nvim config files",
 })
+
+local dap = require("dap")
+local dap_python = require("dap-python")
+
+-- Set keybindings for debugging
+vim.api.nvim_set_keymap(
+	"n",
+	"<leader>db",
+	":lua require'dap'.toggle_breakpoint()<CR>",
+	{ noremap = true, silent = true }
+)
+
+vim.api.nvim_set_keymap("n", "<leader>dd", ":lua require'dapui'.open()<CR>", { noremap = true, silent = true })
