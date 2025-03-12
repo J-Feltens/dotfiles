@@ -114,3 +114,18 @@ vim.api.nvim_set_keymap(
 )
 
 vim.api.nvim_set_keymap("n", "<leader>dd", ":lua require'dapui'.open()<CR>", { noremap = true, silent = true })
+
+-- tab shortcuts
+vim.api.nvim_set_keymap("n", "<leader>1", ":BufferGoto 1<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>2", ":BufferGoto 2<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>3", ":BufferGoto 3<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>4", ":BufferGoto 4<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>5", ":BufferGoto 5<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>6", ":BufferGoto 6<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>7", ":BufferGoto 7<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>8", ":BufferGoto 8<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>9", ":BufferGoto 9<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>0", ":BufferGoto 0<CR>", { noremap = true, silent = true })
+
+vim.api.nvim_set_keymap("n", "<leader>w", ":BufferClose<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>q", ":BufferCloseAllButCurrentOrPinned<CR>", { noremap = true, silent = true })
