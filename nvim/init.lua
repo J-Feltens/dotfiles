@@ -129,3 +129,8 @@ vim.api.nvim_set_keymap("n", "<leader>0", ":BufferGoto 0<CR>", { noremap = true,
 
 vim.api.nvim_set_keymap("n", "<leader>w", ":BufferClose<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>q", ":BufferCloseAllButCurrentOrPinned<CR>", { noremap = true, silent = true })
+
+
+-- csv viewer:
+vim.api.nvim_set_keymap("n", "<leader>csv", ":CsvViewToggle display_mode=border header_lnum=1<CR>",
+	{ noremap = true, silent = true })
