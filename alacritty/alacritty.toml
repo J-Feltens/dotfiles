@@ -1,0 +1,8 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/kanagawa.toml"
+]
+
+[font]
+size = 10.0
+normal = { family = "Hack Nerd Font", style = "Regular" }
