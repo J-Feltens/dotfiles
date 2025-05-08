@@ -31,7 +31,8 @@ if $YES_FLAG || [[ $REPLY =~ ^[Yy]$ ]]; then
   cp -rf ~/dotfiles/nvim ~/.config/
   cp -rf ~/dotfiles/fish ~/.config/
   cp -rf ~/dotfiles/tmux ~/.config/
-  cp -rf ~/dotfiles/starship ~/.config/
+  cp -rf ~/dotfiles/fastfetch ~/.config/
+  cp -rf ~/dotfiles/alacritty ~/.config/
 
   echo 'Done :)'
 else
