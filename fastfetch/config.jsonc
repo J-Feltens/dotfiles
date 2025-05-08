@@ -4,8 +4,8 @@
         "width": 20,
         "height": 20,
         "padding": {
-            "top": 5,
-            "left": 3
+            "top": 2,
+            "left": 4
         }
     },
   "modules": [
