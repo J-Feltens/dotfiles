@@ -1,5 +1,9 @@
-echo
-fastfetch
-echo
+if [[ $- == *i* ]]
+then
+	echo
+	echo
+	fastfetch
+	echo
 
-fish
+	fish
+fi
