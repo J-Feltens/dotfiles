@@ -1,4 +1,4 @@
-function ls --description "Use eza for a fancier ls"
+function lss --description "Use eza for a fancier ls"
     if command -q eza
         echo
         eza -l -o --header --no-user $argv
